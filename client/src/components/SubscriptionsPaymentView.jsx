@@ -134,6 +134,9 @@ class SubscriptionsPaymentView extends React.Component {
                   <i className="dropdown icon" />
                   <div className="default text">Select Country</div>
                   <div className="menu">
+                    <div className="item" data-value="us">
+                      <i className="us flag" />United States
+                    </div>
                     <div className="item" data-value="af">
                       <i className="af flag" />Afghanistan
                     </div>
@@ -817,9 +820,6 @@ class SubscriptionsPaymentView extends React.Component {
                     </div>
                     <div className="item" data-value="ae">
                       <i className="ae flag" />United Arab Emirates
-                    </div>
-                    <div className="item" data-value="us">
-                      <i className="us flag" />United States
                     </div>
                     <div className="item" data-value="uy">
                       <i className="uy flag" />Uruguay

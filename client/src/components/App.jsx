@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import DashboardView from './DashboardView.jsx';
 import HomeView from './HomeView.jsx';
-import TutorsView from './TutorsView.jsx';
 import InvoiceListView from './InvoiceListView.jsx';
 import InvoiceCreateView from './InvoiceCreateView.jsx';
 import SubscriptionsView from './SubscriptionsView.jsx';
@@ -133,7 +132,6 @@ class App extends React.Component {
           { this.state.isSignedIn &&
             <Menu.Item name='dashboard' as={Link} to='/dashboard' active={activeItem === '/dashboard' || activeItem.includes('/tutors/')} onClick={this.handleItemClick} replace />
           }
-          <Menu.Item name='tutors' as={Link} to='/tutors' active={activeItem === '/tutors'} onClick={this.handleItemClick} replace />
           <Menu.Menu position='right'>
             {this.state.isSignedIn ?
               <Menu.Item name='logout' active={activeItem === '/logout'} onClick={this.logout} replace /> :
@@ -150,7 +148,6 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' render={() => <HomeView />} />
           <Route exact path='/dashboard' render={() => <DashboardView displayName={this.state.user.name} tutor={this.state.user.username} students={this.state.user.students} email={this.state.user.email} createstudent={this.createStudent} />} />
-          <Route exact path='/tutors' render={() => <TutorsView />} />
           <Route path='/tutors/:tutor' render={() => <DashboardView tutor={this.state.user.username} email={this.state.user.email} />} />
           <Route path='/dashboard/:tutor' render={() => <DashboardView tutor={this.state.user.username} />} />
           <Route path='/createInvoice' render={() => <InvoiceCreateView /> } />

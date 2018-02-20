@@ -43,8 +43,8 @@ class DashboardView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      description: '',
-      subjects: [],
+      description: 'Hi! I’m Moon. I’ve been tutoring for 10+ years and have a true passion for math and science. I began tutoring by helping other students in my high school classes. In college, I worked as a private math and finance tutor with the Business department at the University of Maryland. In 2012, I took a position with the tutoring company ‘UMD Tutors’ where I worked one-on-one with High school and College students preparing students for exams, helping with homework, and lots of SAT, ACT, and GRE math test preparation.',
+      subjects: ['English', 'Mathematics', 'Science', 'JavaScript'],
       tutor: '',
       isLoading: false,
       results: [],
@@ -71,6 +71,9 @@ class DashboardView extends React.Component {
   componentDidMount() {
     this.resetComponent();
     this.getTutorInfo();
+    this.setState({
+      description: 'Hi! I’m Moon. I’ve been tutoring for 10+ years and have a true passion for math and science. I began tutoring by helping other students in my high school classes. In college, I worked as a private math and finance tutor with the Business department at the University of Maryland. In 2012, I took a position with the tutoring company ‘UMD Tutors’ where I worked one-on-one with High school and College students preparing students for exams, helping with homework, and lots of SAT, ACT, and GRE math test preparation.' 
+    })
   }
 
   getTutorInfo() {
